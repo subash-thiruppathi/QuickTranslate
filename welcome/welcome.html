@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to QuickTranslate 🎉</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1120;
+        --card-bg: #1e293b;
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --border: #334155;
+      }
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      padding: 50px 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .header {
+      text-align: center;
+    }
+    .logo {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 12px;
+      display: block;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--primary);
+    }
+    .tagline {
+      color: var(--text-muted);
+      font-size: 16px;
+      margin-top: 6px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .step-number {
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-content strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+    .step-content p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .practice-box {
+      background: var(--bg);
+      border: 2px dashed var(--primary);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 14px;
+      text-align: center;
+      user-select: text;
+    }
+    .practice-box p {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .practice-hint {
+      display: block;
+      font-size: 12px;
+      color: var(--primary);
+      margin-top: 6px;
+      font-weight: 600;
+    }
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+    .badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="../icons/icon128.png" alt="QuickTranslate" class="logo">
+      <h1>Welcome to QuickTranslate! 🎉</h1>
+      <p class="tagline">Instant text selection translation is now active in your browser.</p>
+    </header>
+
+    <div class="card">
+      <h2>🚀 3 Quick Steps to Get Started</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <strong>Pin QuickTranslate for quick access</strong>
+            <p>Click the Extensions icon (🧩) in your Chrome toolbar, then click the Pin icon next to <strong>QuickTranslate</strong>.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <strong>Select any text on any webpage</strong>
+            <p>Whenever you highlight text, the translation card will immediately pop up near your cursor with audio pronunciation and copy options.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <strong>Drag and customize anytime</strong>
+            <p>Click and drag the header or grip handle (⋮⋮) to reposition the card anywhere you want. Click the extension icon to change your default language.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🎯 Try It Right Now!</h2>
+      <p style="font-size: 14px; color: var(--text-muted);">Highlight the text in the box below to test your instant translator:</p>
+      
+      <div class="practice-box">
+        <p>"Le voyage de mille lieues commence par un premier pas."</p>
+        <span class="practice-hint">👆 Highlight this French proverb to translate!</span>
+      </div>
+    </div>
+
+    <footer class="footer">
+      QuickTranslate • Fast, Private, and Free • Enjoy browsing the multilingual web!
+    </footer>
+  </div>
+</body>
+</html>

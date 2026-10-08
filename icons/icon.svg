@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#grad)" filter="url(#shadow)"/>
+
+  <!-- Translate graphic -->
+  <g fill="#ffffff">
+    <path d="M68.7 80.3l-13.6-13.5.2-.2c9.3-10.4 16-22.4 19.9-35.1H88V24.5H50.4V14.8H39.6v9.7H2V35.2h60C58.4 45.6 52.7 55.4 45 64c-5-5.5-9.1-11.6-12.4-18H21.9c3.9 8.8 9.3 17 16 24.5L10.6 97.4l7.6 7.6 27.5-27.5 16.7 16.7 4.1-11v-2.9zM99.1 53.8h-10.8L64.2 118.2h10.8l6-16.1h25.5l6 16.1h10.8L99.1 53.8zm-14.1 37.6l8.7-23.3 8.7 23.3H85z"/>
+  </g>
+</svg>

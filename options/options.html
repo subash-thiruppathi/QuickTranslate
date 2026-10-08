@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickTranslate - Options & Preferences</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+        </svg>
+        <h1>QuickTranslate Settings</h1>
+      </div>
+      <p class="subtitle">Customize your instant selection translation experience</p>
+    </header>
+
+    <div class="card">
+      <h2>General Preferences</h2>
+      
+      <div class="field">
+        <label for="target-lang">Preferred Target Language</label>
+        <span class="hint">Highlighted text will automatically translate into this language.</span>
+        <select id="target-lang" class="input-select"></select>
+      </div>
+
+      <div class="field">
+        <label>Translation Trigger Style</label>
+        <span class="hint">Choose how and when translation popups should appear.</span>
+        <div class="radio-group">
+          <label class="radio-card">
+            <input type="radio" name="triggerMode" value="instant">
+            <div class="radio-body">
+              <strong>Instant Tooltip</strong>
+              <p>Translates immediately whenever text is selected (Recommended for maximum speed).</p>
+            </div>
+          </label>
+
+          <label class="radio-card">
+            <input type="radio" name="triggerMode" value="icon">
+            <div class="radio-body">
+              <strong>Floating Icon Badge</strong>
+              <p>Shows a small translate button next to selected text. Click it to view the translation.</p>
+            </div>
+          </label>
+
+          <label class="radio-card">
+            <input type="radio" name="triggerMode" value="modifier">
+            <div class="radio-body">
+              <strong>Modifier Key</strong>
+              <p>Only translates if you hold down the Alt / Option key while selecting.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Audio & Dictionary</h2>
+
+      <div class="field-toggle">
+        <div>
+          <label>Auto-play Pronunciation</label>
+          <span class="hint">Automatically speak the translated phrase out loud when translated.</span>
+        </div>
+        <input type="checkbox" id="auto-speak" class="switch">
+      </div>
+
+      <div class="field-toggle">
+        <div>
+          <label>Show Dictionary & Synonyms</label>
+          <span class="hint">Display definitions and alternative word meanings for single words.</span>
+        </div>
+        <input type="checkbox" id="show-dictionary" class="switch">
+      </div>
+
+      <div class="field">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select" class="input-select">
+          <option value="auto">System Default</option>
+          <option value="light">Light Mode</option>
+          <option value="dark">Dark Mode</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Excluded Websites</h2>
+      <span class="hint">Disable translation popups on specific websites (one domain per line, e.g. <code>github.com</code>).</span>
+      <textarea id="excluded-domains" rows="4" class="input-textarea" placeholder="bank.com&#10;internal.company.com"></textarea>
+    </div>
+
+    <div class="card">
+      <h2>Data & History</h2>
+      <div class="actions-row">
+        <button id="export-history-btn" class="btn secondary">Export Translation History (JSON)</button>
+        <button id="clear-all-history-btn" class="btn danger">Clear History</button>
+      </div>
+    </div>
+
+    <div class="save-bar">
+      <span id="save-status" class="save-status"></span>
+      <button id="save-btn" class="btn primary">Save Changes</button>
+    </div>
+  </div>
+
+  <script src="../utils/languages.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
